@@ -6,11 +6,11 @@
 ###################################
 
 # Pull base image.
-FROM python:2.7
+FROM python:3.11
 
-RUN git clone https://github.com/qn7o/jinja2-live-parser.git /data
+COPY .  /app
 
-WORKDIR /data
+WORKDIR /app
 
 # Install dependencies
 RUN pip install -r requirements.txt
@@ -19,7 +19,7 @@ RUN pip install -r requirements.txt
 RUN sed -i 's/host=config.HOST/host="0.0.0.0"/g' parser.py
 
 # Expose port to Host
-EXPOSE 5000
+EXPOSE 8101
 
 # Define default command.
 CMD ["python", "parser.py"]
