@@ -9,7 +9,7 @@ The fork adds some minor fixes and changes the default port for better compatibi
 
 ### Clone + pip
 
-    $ git clone git@github.com:abourguignon/jinja2-live-parser.git
+    $ git clone https://github.com/Alex-Eslava/jinja2-live-parser.git
     $ pip install -r requirements.txt
     $ python parser.py
 
